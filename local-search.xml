@@ -4,13 +4,19 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2021/03/14/hello-world/"/>
-    <url>/2021/03/14/hello-world/</url>
+    <title>学习swift ui笔记</title>
+    <link href="/2021/08/04/%E5%AD%A6%E4%B9%A0swift-ui%E7%AC%94%E8%AE%B0/"/>
+    <url>/2021/08/04/%E5%AD%A6%E4%B9%A0swift-ui%E7%AC%94%E8%AE%B0/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h6 id="SwiftUI-学习笔记"><a href="#SwiftUI-学习笔记" class="headerlink" title="SwiftUI 学习笔记"></a>SwiftUI 学习笔记</h6><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="视图操作"><a href="#视图操作" class="headerlink" title="视图操作"></a>视图操作</h3><blockquote><p>SwiftUI 常用方法 官方学习教程 <a href="https://developer.apple.com/tutorials/swiftui/">https://developer.apple.com/tutorials/swiftui/</a></p></blockquote><p><code>func scaleEffect(_ scale: CGSize, anchor: UnitPoint = .center) -&gt; some View</code></p><h5 id="相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出"><a href="#相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出" class="headerlink" title="相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出"></a>相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出</h5><ul><li><p><strong>scale</strong></p><p>相对于水平和垂直方向的缩放比</p></li><li><p><strong>anchor</strong></p><p>默认为 UnitPoint/center 的点 定义视图中应用的位置</p></li></ul><p><code>func hueRotation(_ angle: Angle) -&gt; some View</code></p><ul><li><p><strong>Angle(degrees: 180)</strong></p><p>对视图进行色调调整</p></li></ul><p><code> func grayscale(_ amount: Double) -&gt; some View</code></p><ul><li><p><strong>.grayscale(0.50)</strong></p><p>对视图添加灰度效果</p></li></ul><h3 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h3><p><code>@inlinable public func environmentObject&lt;T&gt;(_ object: T) -&gt; some View where T : ObservableObject</code></p><h5 id="向子元素-传递-ObservableObject-对象使数据可以被监听"><a href="#向子元素-传递-ObservableObject-对象使数据可以被监听" class="headerlink" title="向子元素 传递 ObservableObject 对象使数据可以被监听"></a>向子元素 传递 ObservableObject 对象使数据可以被监听</h5><ul><li><strong>object 参数对象</strong></li></ul><p><code>@Environment</code></p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>学习</tag>
+      
+    </tags>
     
   </entry>
   
