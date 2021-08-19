@@ -20,9 +20,25 @@
   <meta name="author" content="zhenghui">
   <meta name="keywords" content="">
   
-  <title>Archiv - 混吃等死ing...</title>
+  <title>docker部署nuxt应用, 并支持部署自定义http server - 混吃等死ing...</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
 
 
 
@@ -50,7 +66,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -137,9 +153,46 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Archiv">
+            <span class="h2" id="subtitle" title="docker部署nuxt应用, 并支持部署自定义http server">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-08-11 18:31" pubdate>
+        August 11, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      244 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      2
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -152,52 +205,97 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">Insgesamt 3 Artikel.</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2021</p>
-    
-    <a href="/2021/08/11/docker%E9%83%A8%E7%BD%B2nuxt%E5%BA%94%E7%94%A8-%E5%B9%B6%E6%94%AF%E6%8C%81%E9%83%A8%E7%BD%B2%E8%87%AA%E5%AE%9A%E4%B9%89http-server/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">docker部署nuxt应用, 并支持部署自定义http server</span>
-      <time style="float: right;">08-11</time>
-    </a>
-  
-    
-    <a href="/2021/08/05/Environment%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">Environment深入研究与使用</span>
-      <time style="float: right;">08-05</time>
-    </a>
-  
-    
-    <a href="/2021/08/04/%E5%AD%A6%E4%B9%A0swift-ui%E7%AC%94%E8%AE%B0/" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">学习swift ui笔记</span>
-      <time style="float: right;">08-04</time>
-    </a>
-  
-</div>
 
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">docker部署nuxt应用, 并支持部署自定义http server</h1>
+            
+            <div class="markdown-body">
+              <p>前言: 最近在做一个前端项目。为了使用服务端渲染，使用nuxt 写的。项目已经完成的差不多了。本来是采用pm2 + nginx 反向代理的方式部署的应用的。</p>
+<blockquote>
+<p> 但是最近有个新的需求就是。每次部署需要自定义http请求的接口地址  axios.defaults.baseURL </p>
+</blockquote>
+<p>于是就打算使用docker 构建一个镜像。利用<code>docker run -d -e API_URL=http://36.158.255.9:8081/v1 ....</code>的形式来启动项目。</p>
+<p>利用 docker 的 <strong>-e</strong> 参数可以向容器写入一个自定义的环境变量。做到前端可以通过环境变量的形式来调用api 接口  </p>
+<p>例如 <code>axios.defaults.baseURL = process.env.API_URL </code></p>
+<blockquote>
+<p>但理想是美好的。现实总是残忍的。。。</p>
+</blockquote>
+<ul>
+<li>构建镜像 </li>
+<li>写入自定义参数。启动image 镜像</li>
+<li>访问对应端口的项目</li>
+</ul>
+<p>发现项目能够正常访问。但是项目并没有读取到设置的环境变量</p>
 
-
-
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/nuxt/">nuxt</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/08/05/Environment%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6%E4%B8%8E%E4%BD%BF%E7%94%A8/">
+                        <span class="hidden-mobile">Environment深入研究与使用</span>
+                        <span class="visible-mobile">Nächster</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -277,9 +375,15 @@
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
 
 
 
