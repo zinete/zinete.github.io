@@ -4,6 +4,44 @@
   
   
   <entry>
+    <title>江西九江美食-温泉之旅</title>
+    <link href="/2023/11/29/%E6%B1%9F%E8%A5%BF%E4%B9%9D%E6%B1%9F%E7%BE%8E%E9%A3%9F-%E6%B8%A9%E6%B3%89%E4%B9%8B%E6%97%85/"/>
+    <url>/2023/11/29/%E6%B1%9F%E8%A5%BF%E4%B9%9D%E6%B1%9F%E7%BE%8E%E9%A3%9F-%E6%B8%A9%E6%B3%89%E4%B9%8B%E6%97%85/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>一些问题记录</title>
+    <link href="/2023/05/07/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <url>/2023/05/07/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>git 代码提交验证问题</p></blockquote><p>配置 gpg 之后如果提交代码失败，需要在终端执行<code> export GPG_TTY=$(tty)</code><br>然后再次提交，按照提示输入 gpg 配置的密码即可</p><p><code>gpg --full-generate-key</code> 交互式命令创建新的 gpg key</p><p><code>gpg --list-keys</code> 查看创建的所有 gpg key</p><p><code>gpg --armor --export zhenghui@zinete.com</code> 查看指定邮箱 gpg 公钥</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>docker部署nuxt应用, 并支持部署自定义http server</title>
     <link href="/2021/08/11/docker%E9%83%A8%E7%BD%B2nuxt%E5%BA%94%E7%94%A8/"/>
     <url>/2021/08/11/docker%E9%83%A8%E7%BD%B2nuxt%E5%BA%94%E7%94%A8/</url>
