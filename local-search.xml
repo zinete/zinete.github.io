@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>docker部署nuxt应用, 并支持部署自定义http server</title>
+    <link href="/2021/08/11/docker%E9%83%A8%E7%BD%B2nuxt%E5%BA%94%E7%94%A8/"/>
+    <url>/2021/08/11/docker%E9%83%A8%E7%BD%B2nuxt%E5%BA%94%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<p>前言: 最近在做一个前端项目。为了使用服务端渲染，使用 nuxt 写的。项目已经完成的差不多了。本来是采用 pm2 + nginx 反向代理的方式部署的应用的。</p><blockquote><p>但是最近有个新的需求就是。每次部署需要自定义 http 请求的接口地址 axios.defaults.baseURL</p></blockquote><p>于是就打算使用 docker 构建一个镜像。利用<code>docker run -d -e API_URL=&#123;api url&#125; ....</code>的形式来启动项目。</p><p>利用 docker 的 <strong>-e</strong> 参数可以向容器写入一个自定义的环境变量。做到前端可以通过环境变量的形式来调用 api 接口</p><p>例如 <code>axios.defaults.baseURL = process.env.API_URL </code></p><blockquote><p>但理想是美好的。现实总是残忍的。。。</p></blockquote><ul><li>构建镜像</li><li>写入自定义参数。启动 image 镜像</li><li>访问对应端口的项目</li></ul><p>发现项目能够正常访问。但是项目并没有读取到设置的环境变量。然后进入 docker 容器内部查看。发现容器内部也是生成了自定义读取的变量。但是 next 项目却无法通过 <code>process.env.API_URL</code> 这种形式来调取。这就很奇怪了。</p><p><img src="/img/process.png" alt="image-20211116102527849"></p><p>经过一番搜索之后。在 nuxt 官方文档发现了 Runtime config properties（运行时配置属性） 这个配置项。</p><p>在 <code>next.config.js</code>中添加如下配置。那么我们在打包成 docker 镜像之后通过<code> λ docker run -d -e API_URL=https://nuxtjs.org</code> 这种形式注入的参数就可以在前端项目中通过环境变量的形式引用到</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br>  <span class="hljs-attr">publicRuntimeConfig</span>: &#123;<br>    <span class="hljs-attr">baseURL</span>: process.<span class="hljs-property">env</span>.<span class="hljs-property">BASE_URL</span> || <span class="hljs-string">&quot;https://nuxtjs.org&quot;</span>,<br>  &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure><p>在 nuxt plugins 中 引用的 axios 可以通过以下形式来调用</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> (<span class="hljs-params">&#123; $axios, redirect, $config &#125;</span>) &#123;<br>  $axios.<span class="hljs-property">defaults</span>.<span class="hljs-property">baseURL</span> = $config.<span class="hljs-property">API_URL</span>;<br>  $axios.<span class="hljs-property">defaults</span>.<span class="hljs-property">timeout</span> = <span class="hljs-number">30000</span>;<br>  $axios.<span class="hljs-title function_">onError</span>(<span class="hljs-function">(<span class="hljs-params">error</span>) =&gt;</span> &#123;<br>    <span class="hljs-keyword">if</span> (error.<span class="hljs-property">response</span>.<span class="hljs-property">status</span> === <span class="hljs-number">500</span>) &#123;<br>      <span class="hljs-title function_">redirect</span>(<span class="hljs-string">&quot;/error&quot;</span>);<br>    &#125;<br>  &#125;);<br>&#125;<br></code></pre></td></tr></table></figure><p>在 vue 页面中可以通过 <code>this.$config.API_URL</code>来调用</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>nuxt</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>学习swift ui笔记</title>
+    <link href="/2021/08/04/%E5%AD%A6%E4%B9%A0swift%20ui%E7%AC%94%E8%AE%B0/"/>
+    <url>/2021/08/04/%E5%AD%A6%E4%B9%A0swift%20ui%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<h6 id="SwiftUI-学习笔记"><a href="#SwiftUI-学习笔记" class="headerlink" title="SwiftUI 学习笔记"></a>SwiftUI 学习笔记</h6><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="视图操作"><a href="#视图操作" class="headerlink" title="视图操作"></a>视图操作</h3><blockquote><p>SwiftUI 常用方法 官方学习教程 <a href="https://developer.apple.com/tutorials/swiftui/">https://developer.apple.com/tutorials/swiftui/</a></p></blockquote><p><code>func scaleEffect(_ scale: CGSize, anchor: UnitPoint = .center) -&gt; some View</code></p><h5 id="相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出"><a href="#相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出" class="headerlink" title="相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出"></a>相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出</h5><ul><li><p><strong>scale</strong></p><p>相对于水平和垂直方向的缩放比</p></li><li><p><strong>anchor</strong></p><p>默认为 UnitPoint&#x2F;center 的点 定义视图中应用的位置</p></li></ul><p><code>func hueRotation(_ angle: Angle) -&gt; some View</code></p><ul><li><p><strong>Angle(degrees: 180)</strong></p><p>对视图进行色调调整</p></li></ul><p><code> func grayscale(_ amount: Double) -&gt; some View</code></p><ul><li><p><strong>.grayscale(0.50)</strong></p><p>对视图添加灰度效果</p></li></ul><h3 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h3><p><code>@inlinable public func environmentObject&lt;T&gt;(_ object: T) -&gt; some View where T : ObservableObject</code></p><h5 id="向子元素-传递-ObservableObject-对象使数据可以被监听"><a href="#向子元素-传递-ObservableObject-对象使数据可以被监听" class="headerlink" title="向子元素 传递 ObservableObject 对象使数据可以被监听"></a>向子元素 传递 ObservableObject 对象使数据可以被监听</h5><ul><li><strong>object 参数对象</strong></li></ul><p><code>@Environment</code></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
