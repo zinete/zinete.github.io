@@ -18,24 +18,24 @@
   <meta name="author" content="Zheng Hui">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言: 最近在做一个前端项目。为了使用服务端渲染，使用 nuxt 写的。项目已经完成的差不多了。本来是采用 pm2 + nginx 反向代理的方式部署的应用的。  但是最近有个新的需求就是。每次部署需要自定义 http 请求的接口地址 axios.defaults.baseURL  于是就打算使用 docker 构建一个镜像。利用docker run -d -e API_URL&#x3D;&#123;api">
+    <meta name="description" content="时间(预计 2 天 1 晚)     行程 时间 车次 预计时间    罗田-武汉 7、8 月份 顺风车、大把 2 小时   武汉站-宜昌东 7、8 月份 汉口—宜昌东 （D5742） 2 小时   购买车票链接  下晚班，坐顺车到达武汉乘坐高铁（汉口站、武汉站均可）12:30 坐上车的话。下午 14:30 点之前就可以到宜昌。然后就可以去酒店休息休息晚上出去吃好吃的了。  住的地方（酒店）可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker部署nuxt应用, 并支持部署自定义http server">
-<meta property="og:url" content="http://www.zinete.com/2021/08/11/docker%E9%83%A8%E7%BD%B2nuxt%E5%BA%94%E7%94%A8/index.html">
+<meta property="og:title" content="武汉-宜昌两天一夜游">
+<meta property="og:url" content="http://www.zinete.com/2024/07/21/%E6%AD%A6%E6%B1%89-%E5%AE%9C%E6%98%8C/index.html">
 <meta property="og:site_name" content="Zhenghui&#39;s blog">
-<meta property="og:description" content="前言: 最近在做一个前端项目。为了使用服务端渲染，使用 nuxt 写的。项目已经完成的差不多了。本来是采用 pm2 + nginx 反向代理的方式部署的应用的。  但是最近有个新的需求就是。每次部署需要自定义 http 请求的接口地址 axios.defaults.baseURL  于是就打算使用 docker 构建一个镜像。利用docker run -d -e API_URL&#x3D;&#123;api">
+<meta property="og:description" content="时间(预计 2 天 1 晚)     行程 时间 车次 预计时间    罗田-武汉 7、8 月份 顺风车、大把 2 小时   武汉站-宜昌东 7、8 月份 汉口—宜昌东 （D5742） 2 小时   购买车票链接  下晚班，坐顺车到达武汉乘坐高铁（汉口站、武汉站均可）12:30 坐上车的话。下午 14:30 点之前就可以到宜昌。然后就可以去酒店休息休息晚上出去吃好吃的了。  住的地方（酒店）可">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://www.zinete.com/img/process.png">
-<meta property="article:published_time" content="2021-08-11T18:31:34.000Z">
-<meta property="article:modified_time" content="2024-07-25T14:05:05.648Z">
+<meta property="og:image" content="https://s2.loli.net/2024/07/21/QGdYo5uc1JMIRnU.jpg">
+<meta property="article:published_time" content="2024-07-21T11:06:34.000Z">
+<meta property="article:modified_time" content="2024-07-25T14:05:05.652Z">
 <meta property="article:author" content="Zheng Hui">
-<meta property="article:tag" content="nuxt">
+<meta property="article:tag" content="旅行">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://www.zinete.com/img/process.png">
+<meta name="twitter:image" content="https://s2.loli.net/2024/07/21/QGdYo5uc1JMIRnU.jpg">
   
   
   
-  <title>docker部署nuxt应用, 并支持部署自定义http server - Zhenghui&#39;s blog</title>
+  <title>武汉-宜昌两天一夜游 - Zhenghui&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="docker部署nuxt应用, 并支持部署自定义http server"></span>
+            <span id="subtitle" data-typed-text="武汉-宜昌两天一夜游"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2021-08-11 18:31" pubdate>
-          2021年8月11日 晚上
+        <time datetime="2024-07-21 11:06" pubdate>
+          2024年7月21日 上午
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          298 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          10 分钟
+          3 分钟
         
       </span>
     
@@ -272,36 +272,48 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">docker部署nuxt应用, 并支持部署自定义http server</h1>
+            <h1 id="seo-header">武汉-宜昌两天一夜游</h1>
             
             
               <div class="markdown-body">
                 
-                <p>前言: 最近在做一个前端项目。为了使用服务端渲染，使用 nuxt 写的。项目已经完成的差不多了。本来是采用 pm2 + nginx 反向代理的方式部署的应用的。</p>
+                <p><img src="https://s2.loli.net/2024/07/21/QGdYo5uc1JMIRnU.jpg" srcset="/img/loading.gif" lazyload alt="宜昌景区地图"></p>
 <blockquote>
-<p>但是最近有个新的需求就是。每次部署需要自定义 http 请求的接口地址 axios.defaults.baseURL</p>
+<p>时间(预计 2 天 1 晚)</p>
 </blockquote>
-<p>于是就打算使用 docker 构建一个镜像。利用<code>docker run -d -e API_URL=&#123;api url&#125; ....</code>的形式来启动项目。</p>
-<p>利用 docker 的 <strong>-e</strong> 参数可以向容器写入一个自定义的环境变量。做到前端可以通过环境变量的形式来调用 api 接口</p>
-<p>例如 <code>axios.defaults.baseURL = process.env.API_URL </code></p>
+<table>
+<thead>
+<tr>
+<th align="left">行程</th>
+<th align="left">时间</th>
+<th align="center">车次</th>
+<th align="center">预计时间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">罗田-武汉</td>
+<td align="left">7、8 月份</td>
+<td align="center">顺风车、大把</td>
+<td align="center">2 小时</td>
+</tr>
+<tr>
+<td align="left">武汉站-宜昌东</td>
+<td align="left">7、8 月份</td>
+<td align="center">汉口—宜昌东 （D5742）</td>
+<td align="center">2 小时</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://kyfw.12306.cn/otn/leftTicket/init?linktypeid=dc&fs=%E6%AD%A6%E6%B1%89,WHN&ts=%E5%AE%9C%E6%98%8C%E4%B8%9C,HAN&date=2024-07-30&flag=N,N,Y">购买车票链接</a></p>
 <blockquote>
-<p>但理想是美好的。现实总是残忍的。。。</p>
+<p>下晚班，坐顺车到达武汉乘坐高铁（汉口站、武汉站均可）12:30 坐上车的话。下午 14:30 点之前就可以到宜昌。然后就可以去酒店休息休息晚上出去吃好吃的了。</p>
 </blockquote>
-<ul>
-<li>构建镜像</li>
-<li>写入自定义参数。启动 image 镜像</li>
-<li>访问对应端口的项目</li>
-</ul>
-<p>发现项目能够正常访问。但是项目并没有读取到设置的环境变量。然后进入 docker 容器内部查看。发现容器内部也是生成了自定义读取的变量。但是 next 项目却无法通过 <code>process.env.API_URL</code> 这种形式来调取。这就很奇怪了。</p>
-<p><img src="/img/process.png" srcset="/img/loading.gif" lazyload alt="image-20211116102527849"></p>
-<p>经过一番搜索之后。在 nuxt 官方文档发现了 Runtime config properties（运行时配置属性） 这个配置项。</p>
-<p>在 <code>next.config.js</code>中添加如下配置。那么我们在打包成 docker 镜像之后通过<code> λ docker run -d -e API_URL=https://nuxtjs.org</code> 这种形式注入的参数就可以在前端项目中通过环境变量的形式引用到</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br>  <span class="hljs-attr">publicRuntimeConfig</span>: &#123;<br>    <span class="hljs-attr">baseURL</span>: process.<span class="hljs-property">env</span>.<span class="hljs-property">BASE_URL</span> || <span class="hljs-string">&quot;https://nuxtjs.org&quot;</span>,<br>  &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-<p>在 nuxt plugins 中 引用的 axios 可以通过以下形式来调用</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> (<span class="hljs-params">&#123; $axios, redirect, $config &#125;</span>) &#123;<br>  $axios.<span class="hljs-property">defaults</span>.<span class="hljs-property">baseURL</span> = $config.<span class="hljs-property">API_URL</span>;<br>  $axios.<span class="hljs-property">defaults</span>.<span class="hljs-property">timeout</span> = <span class="hljs-number">30000</span>;<br>  $axios.<span class="hljs-title function_">onError</span>(<span class="hljs-function">(<span class="hljs-params">error</span>) =&gt;</span> &#123;<br>    <span class="hljs-keyword">if</span> (error.<span class="hljs-property">response</span>.<span class="hljs-property">status</span> === <span class="hljs-number">500</span>) &#123;<br>      <span class="hljs-title function_">redirect</span>(<span class="hljs-string">&quot;/error&quot;</span>);<br>    &#125;<br>  &#125;);<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>在 vue 页面中可以通过 <code>this.$config.API_URL</code>来调用</p>
+<h3 id="住的地方（酒店）"><a href="#住的地方（酒店）" class="headerlink" title="住的地方（酒店）"></a>住的地方（酒店）</h3><p>可以选择宜昌城区酒店，类似全季酒店这种</p>
+<h3 id="晚上"><a href="#晚上" class="headerlink" title="晚上"></a>晚上</h3><p>TODO</p>
+<blockquote>
+<p>Tips 打卡奶茶 洪都大拇指雪顶奶茶</p>
+</blockquote>
+<h3 id="第二天早上"><a href="#第二天早上" class="headerlink" title="第二天早上"></a>第二天早上</h3><p>去往三峡人家</p>
+<p>🚃 去程<br>可以乘坐景区直通车<br>宜昌东站，9 点 30 左右发车，火车站出站口右手边大巴车停车场。金黄色旅游大巴车配有黄色标识牌。<br>可以现场购票，也可以在小程序 《三峡旅游直通车》上提前购买。</p>
 
                 
               </div>
@@ -314,7 +326,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/nuxt/" class="print-no-link">#nuxt</a>
+        <a href="/tags/%E6%97%85%E8%A1%8C/" class="print-no-link">#旅行</a>
       
     </div>
   
@@ -326,8 +338,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>docker部署nuxt应用, 并支持部署自定义http server</div>
-      <div>http://www.zinete.com/2021/08/11/docker部署nuxt应用/</div>
+      <div>武汉-宜昌两天一夜游</div>
+      <div>http://www.zinete.com/2024/07/21/武汉-宜昌/</div>
     </div>
     <div class="license-meta">
       
@@ -339,7 +351,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2021年8月11日</div>
+          <div>2024年7月21日</div>
         </div>
       
       
@@ -371,18 +383,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/05/07/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" title="一些问题记录">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">一些问题记录</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/08/04/%E5%AD%A6%E4%B9%A0swift%20ui%E7%AC%94%E8%AE%B0/" title="学习swift ui笔记">
-                        <span class="hidden-mobile">学习swift ui笔记</span>
+                      <a href="/2023/11/29/%E6%B1%9F%E8%A5%BF%E5%8D%97%E6%98%8C%E7%BE%8E%E9%A3%9F-%E6%B8%A9%E6%B3%89%E4%B9%8B%E6%97%85/" title="江西南昌美食-温泉之旅">
+                        <span class="hidden-mobile">江西南昌美食-温泉之旅</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
