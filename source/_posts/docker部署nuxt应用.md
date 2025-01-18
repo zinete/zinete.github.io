@@ -22,7 +22,7 @@ tags: nuxt
 
 发现项目能够正常访问。但是项目并没有读取到设置的环境变量。然后进入 docker 容器内部查看。发现容器内部也是生成了自定义读取的变量。但是 next 项目却无法通过 `process.env.API_URL` 这种形式来调取。这就很奇怪了。
 
-![image-20211116102527849](/img/process.png)
+![image-20211116102527849](../img/process.png)
 
 经过一番搜索之后。在 nuxt 官方文档发现了 Runtime config properties（运行时配置属性） 这个配置项。
 
