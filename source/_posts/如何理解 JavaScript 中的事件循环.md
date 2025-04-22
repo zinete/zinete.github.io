@@ -4,6 +4,7 @@ date: 2024-07-12 18:23:50
 tags: "学习"
 categories:
   - [学习]
+index_img: ../img/eventloop.png
 ---
 
 # 如何理解 JavaScript 中的事件循环（Event Loop）

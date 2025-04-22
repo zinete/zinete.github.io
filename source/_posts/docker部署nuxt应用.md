@@ -2,6 +2,7 @@
 title: "Docker部署Nuxt应用, 并支持部署自定义http server"
 date: 2021-08-11 18:31:34
 tags: Nuxt
+index_img: /img/process.png
 categories:
   - [Docker]
 ---
