@@ -26,7 +26,7 @@
 <meta property="og:description" content="SwiftUI 学习笔记视图操作 SwiftUI 常用方法 官方学习教程 https:&#x2F;&#x2F;developer.apple.com&#x2F;tutorials&#x2F;swiftui&#x2F;  1func scaleEffect(_ scale: CGSize, anchor: UnitPoint &#x3D; .center) -&gt; some View  相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出 scal">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-04T03:08:05.000Z">
-<meta property="article:modified_time" content="2025-04-22T07:27:10.851Z">
+<meta property="article:modified_time" content="2025-04-22T08:25:47.368Z">
 <meta property="article:author" content="Zheng Hui">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary_large_image">
@@ -410,6 +410,37 @@
             </div>
 
             
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"CD5cXiC463Nh3eklT4j4xnRh-gzGzoHsz","appKey":"4V4RHo2byX7L2a3SeSaIfwFy","path":"window.location.pathname","placeholder":"说点儿什么吧","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://cd5cxic4.lc-cn-n1-shared.com","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
           </article>
         </div>
       </div>

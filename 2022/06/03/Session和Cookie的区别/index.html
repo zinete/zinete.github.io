@@ -26,7 +26,7 @@
 <meta property="og:description" content="Session 和 Cookie 的区别session 和 cookie 是用于在客户端与服务器之间保持状态的两种技术，它们有一些显著的区别： 1. 存储位置 Cookie存储在客户端（浏览器），数据会随着每次请求自动发送到服务器。 Session存储在服务器，客户端只保存一个唯一的 session_id，通过它找到对应的会话数据。  2. 生命周期 Cookie默认会在浏览器关闭后失效，除非设置">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-03T12:08:05.000Z">
-<meta property="article:modified_time" content="2025-04-22T07:27:10.851Z">
+<meta property="article:modified_time" content="2025-04-22T08:25:47.367Z">
 <meta property="article:author" content="Zheng Hui">
 <meta property="article:tag" content="问题记录">
 <meta name="twitter:card" content="summary_large_image">
@@ -426,6 +426,37 @@
             </div>
 
             
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"CD5cXiC463Nh3eklT4j4xnRh-gzGzoHsz","appKey":"4V4RHo2byX7L2a3SeSaIfwFy","path":"window.location.pathname","placeholder":"说点儿什么吧","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://cd5cxic4.lc-cn-n1-shared.com","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
           </article>
         </div>
       </div>
