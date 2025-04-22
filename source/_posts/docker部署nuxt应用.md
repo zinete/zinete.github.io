@@ -1,7 +1,9 @@
 ---
-title: "docker部署nuxt应用, 并支持部署自定义http server"
+title: "Docker部署Nuxt应用, 并支持部署自定义http server"
 date: 2021-08-11 18:31:34
-tags: nuxt
+tags: Nuxt
+categories:
+  - [Docker]
 ---
 
 前言: 最近在做一个前端项目。为了使用服务端渲染，使用 nuxt 写的。项目已经完成的差不多了。本来是采用 pm2 + nginx 反向代理的方式部署的应用的。

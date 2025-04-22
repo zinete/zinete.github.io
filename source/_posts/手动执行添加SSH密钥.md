@@ -2,6 +2,8 @@
 title: 手动执行添加SSH密钥
 date: 2022-10-04 20:08:05
 tags: "学习"
+categories:
+  - [学习]
 ---
 
 # 自动加载 SSH 密钥并使用 macOS 钥匙串
