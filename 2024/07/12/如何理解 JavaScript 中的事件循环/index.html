@@ -18,22 +18,24 @@
   <meta name="author" content="Zheng Hui">
   <meta name="keywords" content="">
   
-    <meta name="description" content="SwiftUI 学习笔记视图操作 SwiftUI 常用方法 官方学习教程 https:&#x2F;&#x2F;developer.apple.com&#x2F;tutorials&#x2F;swiftui&#x2F;  1func scaleEffect(_ scale: CGSize, anchor: UnitPoint &#x3D; .center) -&gt; some View  相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出 scal">
+    <meta name="description" content="如何理解 JavaScript 中的事件循环（Event Loop）JavaScript 是一种单线程语言，它通过事件循环（Event Loop）机制来实现异步操作的调度与执行。理解事件循环有助于我们更好地编写异步代码，避免一些常见的“回调陷阱”或异步顺序错误。   1. 什么是事件循环？事件循环是一种协调机制，用于决定哪些代码在何时执行，特别是在处理异步任务（如定时器、网络请求、Promise">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习swift ui笔记">
-<meta property="og:url" content="http://www.zinete.com/2021/08/04/%E5%AD%A6%E4%B9%A0swift%20ui%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:title" content="如何理解 JavaScript 中的事件循环">
+<meta property="og:url" content="http://www.zinete.com/2024/07/12/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%20JavaScript%20%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/index.html">
 <meta property="og:site_name" content="Zhenghui&#39;s blog">
-<meta property="og:description" content="SwiftUI 学习笔记视图操作 SwiftUI 常用方法 官方学习教程 https:&#x2F;&#x2F;developer.apple.com&#x2F;tutorials&#x2F;swiftui&#x2F;  1func scaleEffect(_ scale: CGSize, anchor: UnitPoint &#x3D; .center) -&gt; some View  相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出 scal">
+<meta property="og:description" content="如何理解 JavaScript 中的事件循环（Event Loop）JavaScript 是一种单线程语言，它通过事件循环（Event Loop）机制来实现异步操作的调度与执行。理解事件循环有助于我们更好地编写异步代码，避免一些常见的“回调陷阱”或异步顺序错误。   1. 什么是事件循环？事件循环是一种协调机制，用于决定哪些代码在何时执行，特别是在处理异步任务（如定时器、网络请求、Promise">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-08-04T11:08:05.000Z">
+<meta property="og:image" content="http://www.zinete.com/img/eventloop.png">
+<meta property="article:published_time" content="2024-07-12T18:23:50.000Z">
 <meta property="article:modified_time" content="2025-04-22T06:51:26.833Z">
 <meta property="article:author" content="Zheng Hui">
 <meta property="article:tag" content="学习">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://www.zinete.com/img/eventloop.png">
   
   
   
-  <title>学习swift ui笔记 - Zhenghui&#39;s blog</title>
+  <title>如何理解 JavaScript 中的事件循环 - Zhenghui&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="学习swift ui笔记"></span>
+            <span id="subtitle" data-typed-text="如何理解 JavaScript 中的事件循环"></span>
           
         </div>
 
@@ -210,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2021-08-04 11:08" pubdate>
-          2021年8月4日 上午
+        <time datetime="2024-07-12 18:23" pubdate>
+          2024年7月12日 晚上
         </time>
       </span>
     
@@ -222,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          505 字
+          1.4k 字
         
       </span>
     
@@ -233,7 +235,7 @@
         
         
         
-          5 分钟
+          12 分钟
         
       </span>
     
@@ -270,41 +272,71 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">学习swift ui笔记</h1>
+            <h1 id="seo-header">如何理解 JavaScript 中的事件循环</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="SwiftUI-学习笔记"><a href="#SwiftUI-学习笔记" class="headerlink" title="SwiftUI 学习笔记"></a>SwiftUI 学习笔记</h1><h3 id="视图操作"><a href="#视图操作" class="headerlink" title="视图操作"></a>视图操作</h3><blockquote>
-<p>SwiftUI 常用方法 官方学习教程 <a target="_blank" rel="noopener" href="https://developer.apple.com/tutorials/swiftui/">https://developer.apple.com/tutorials/swiftui/</a></p>
-</blockquote>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">func</span> <span class="hljs-title function_">scaleEffect</span>(<span class="hljs-keyword">_</span> <span class="hljs-params">scale</span>: <span class="hljs-type">CGSize</span>, <span class="hljs-params">anchor</span>: <span class="hljs-type">UnitPoint</span> <span class="hljs-operator">=</span> .center) -&gt; <span class="hljs-keyword">some</span> <span class="hljs-type">View</span><br></code></pre></td></tr></table></figure>
-
-<h5 id="相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出"><a href="#相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出" class="headerlink" title="相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出"></a>相对于锚点，按给定的垂直和水平尺寸大小缩放此视图的渲染输出</h5><ul>
-<li><p><strong>scale</strong></p>
-<p>相对于水平和垂直方向的缩放比</p>
-</li>
-<li><p><strong>anchor</strong></p>
-<p>默认为 UnitPoint&#x2F;center 的点 定义视图中应用的位置</p>
-</li>
+                <h1 id="如何理解-JavaScript-中的事件循环（Event-Loop）"><a href="#如何理解-JavaScript-中的事件循环（Event-Loop）" class="headerlink" title="如何理解 JavaScript 中的事件循环（Event Loop）"></a>如何理解 JavaScript 中的事件循环（Event Loop）</h1><p>JavaScript 是一种<strong>单线程</strong>语言，它通过事件循环（Event Loop）机制来实现异步操作的调度与执行。理解事件循环有助于我们更好地编写异步代码，避免一些常见的“回调陷阱”或异步顺序错误。</p>
+<hr>
+<p><img src="/../img/eventloop.png" srcset="/img/loading.gif" lazyload alt="示意图"></p>
+<h2 id="1-什么是事件循环？"><a href="#1-什么是事件循环？" class="headerlink" title="1. 什么是事件循环？"></a>1. 什么是事件循环？</h2><p>事件循环是一种协调机制，用于决定哪些代码在何时执行，特别是在处理异步任务（如定时器、网络请求、Promise 等）时。事件循环的核心流程包括：</p>
+<ol>
+<li>执行同步代码（同步任务进入调用栈）</li>
+<li>执行所有微任务（Microtasks）</li>
+<li>从宏任务队列中取出下一个宏任务执行</li>
+<li>重复上述过程</li>
+</ol>
+<hr>
+<h2 id="2-同步任务-vs-异步任务"><a href="#2-同步任务-vs-异步任务" class="headerlink" title="2. 同步任务 vs 异步任务"></a>2. 同步任务 vs 异步任务</h2><ul>
+<li><strong>同步任务</strong>：立即执行，按顺序排列在调用栈中。</li>
+<li><strong>异步任务</strong>：交由浏览器或 Node 的 Web API 执行，完成后加入任务队列中等待执行。</li>
 </ul>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">func</span> <span class="hljs-title function_">hueRotation</span>(<span class="hljs-keyword">_</span> <span class="hljs-params">angle</span>: <span class="hljs-type">Angle</span>) -&gt; <span class="hljs-keyword">some</span> <span class="hljs-type">View</span><br></code></pre></td></tr></table></figure>
+<hr>
+<h2 id="3-微任务与宏任务"><a href="#3-微任务与宏任务" class="headerlink" title="3. 微任务与宏任务"></a>3. 微任务与宏任务</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>举例</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>微任务 Microtask</strong></td>
+<td>Promise.then、MutationObserver、queueMicrotask</td>
+<td>在当前宏任务完成后立即执行</td>
+</tr>
+<tr>
+<td><strong>宏任务 MacroTask</strong></td>
+<td>setTimeout、setInterval、I&#x2F;O、setImmediate</td>
+<td>会排队等待事件循环进入下一个周期</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="4-执行顺序示例"><a href="#4-执行顺序示例" class="headerlink" title="4. 执行顺序示例"></a>4. 执行顺序示例</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;1&quot;</span>);<br><br><span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;2&quot;</span>);<br>&#125;, <span class="hljs-number">0</span>);<br><br><span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">resolve</span>().<span class="hljs-title function_">then</span>(<span class="hljs-function">() =&gt;</span> &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;3&quot;</span>);<br>&#125;);<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;4&quot;</span>);<br></code></pre></td></tr></table></figure>
 
-<ul>
-<li><p><strong>Angle(degrees: 180)</strong></p>
-<p>对视图进行色调调整</p>
-</li>
+<p>输出结果：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-number">1</span>;<br><span class="hljs-number">4</span>;<br><span class="hljs-number">3</span>;<br><span class="hljs-number">2</span>;<br></code></pre></td></tr></table></figure>
+
+<h3 id="原因分析："><a href="#原因分析：" class="headerlink" title="原因分析："></a>原因分析：</h3><ol>
+<li><code>console.log(&#39;1&#39;)</code> 和 <code>console.log(&#39;4&#39;)</code> 是同步任务，先执行。</li>
+<li><code>setTimeout</code> 是宏任务，进入任务队列。</li>
+<li><code>Promise.then</code> 是微任务，在当前宏任务执行完后立即执行。</li>
+<li>所以先输出 3，然后才是 <code>setTimeout</code> 的 2。</li>
+</ol>
+<h2 id="5-setTimeout-fn-0-并不是“立即执行”"><a href="#5-setTimeout-fn-0-并不是“立即执行”" class="headerlink" title="5. setTimeout(fn, 0) 并不是“立即执行”"></a>5. setTimeout(fn, 0) 并不是“立即执行”</h2><p>即便设置为 0 毫秒，setTimeout 回调也不会在当前调用栈执行完前运行，因为它是宏任务，会等到所有当前宏任务和微任务完成后才进入执行。</p>
+<h2 id="6-实战技巧：分批执行避免阻塞"><a href="#6-实战技巧：分批执行避免阻塞" class="headerlink" title="6. 实战技巧：分批执行避免阻塞"></a>6. 实战技巧：分批执行避免阻塞</h2><p>如果你有一个很大的循环操作，不建议一次性执行</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// 不推荐：可能阻塞 UI</span><br><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">1e9</span>; i++) &#123;<br>  <span class="hljs-comment">// do something</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>可以改为使用 setTimeout 分批执行：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">chunkedTask</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100000</span>; i++) &#123;<br>    <span class="hljs-comment">// do something</span><br>  &#125;<br>  <span class="hljs-keyword">if</span> (moreWork) &#123;<br>    <span class="hljs-built_in">setTimeout</span>(chunkedTask, <span class="hljs-number">0</span>); <span class="hljs-comment">// 让出执行权</span><br>  &#125;<br>&#125;<br><span class="hljs-title function_">chunkedTask</span>();<br></code></pre></td></tr></table></figure>
+
+<h2 id="7-总结"><a href="#7-总结" class="headerlink" title="7. 总结"></a>7. 总结</h2><ul>
+<li><code>JavaScript</code> 是单线程语言，通过事件循环处理异步任务。微任务优先于宏任务执行。</li>
+<li><code>Promise.then</code> 总是在同步任务之后，<code>setTimeout</code> 之后执行。</li>
+<li>理解事件循环，有助于编写更加流畅、性能更佳的前端应用。</li>
 </ul>
-<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">func</span> <span class="hljs-title function_">grayscale</span>(<span class="hljs-keyword">_</span> <span class="hljs-params">amount</span>: <span class="hljs-type">Double</span>) -&gt; <span class="hljs-keyword">some</span> <span class="hljs-type">View</span><br></code></pre></td></tr></table></figure>
 
-<ul>
-<li><p><strong>.grayscale(0.50)</strong></p>
-<p>对视图添加灰度效果</p>
-</li>
-</ul>
-<h3 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift"><span class="hljs-keyword">@inlinable</span> <span class="hljs-keyword">public</span> <span class="hljs-keyword">func</span> <span class="hljs-title function_">environmentObject</span>&lt;<span class="hljs-type">T</span>&gt;(<span class="hljs-keyword">_</span> <span class="hljs-params">object</span>: <span class="hljs-type">T</span>) -&gt; <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> <span class="hljs-keyword">where</span> <span class="hljs-type">T</span> : <span class="hljs-type">ObservableObject</span><br></code></pre></td></tr></table></figure>
-
-<h5 id="向子元素-传递-ObservableObject-对象使数据可以被监听"><a href="#向子元素-传递-ObservableObject-对象使数据可以被监听" class="headerlink" title="向子元素 传递 ObservableObject 对象使数据可以被监听"></a>向子元素 传递 ObservableObject 对象使数据可以被监听</h5>
                 
               </div>
             
@@ -328,8 +360,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>学习swift ui笔记</div>
-      <div>http://www.zinete.com/2021/08/04/学习swift ui笔记/</div>
+      <div>如何理解 JavaScript 中的事件循环</div>
+      <div>http://www.zinete.com/2024/07/12/如何理解 JavaScript 中的事件循环/</div>
     </div>
     <div class="license-meta">
       
@@ -341,7 +373,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2021年8月4日</div>
+          <div>2024年7月12日</div>
         </div>
       
       
@@ -373,15 +405,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/08/11/docker%E9%83%A8%E7%BD%B2nuxt%E5%BA%94%E7%94%A8/" title="docker部署nuxt应用, 并支持部署自定义http server">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">docker部署nuxt应用, 并支持部署自定义http server</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/05/07/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" title="一些问题记录">
+                        <span class="hidden-mobile">一些问题记录</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
