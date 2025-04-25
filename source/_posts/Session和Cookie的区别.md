@@ -2,6 +2,7 @@
 title: Session和Cookie的区别
 date: 2022-06-03 20:08:05
 tags: "问题记录"
+archive: true
 ---
 
 # Session 和 Cookie 的区别

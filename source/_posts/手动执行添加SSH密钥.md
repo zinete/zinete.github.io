@@ -2,6 +2,7 @@
 title: 手动执行添加SSH密钥
 date: 2022-10-04 20:08:05
 tags: "学习"
+archive: true
 categories:
   - [学习]
 ---
