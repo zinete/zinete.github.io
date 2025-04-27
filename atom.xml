@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zhenghui&#39;s blog</title>
+  
+  
+  <link href="http://www.zinete.com/atom.xml" rel="self"/>
+  
+  <link href="http://www.zinete.com/"/>
+  <updated>2025-04-27T07:25:55.693Z</updated>
+  <id>http://www.zinete.com/</id>
+  
+  <author>
+    <name>Zheng Hui</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浏览器渲染原理</title>
+    <link href="http://www.zinete.com/2025/04/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/"/>
+    <id>http://www.zinete.com/2025/04/25/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B8%B2%E6%9F%93%E5%8E%9F%E7%90%86/</id>
+    <published>2025-04-25T02:18:50.000Z</published>
+    <updated>2025-04-27T07:25:55.693Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;浏览器渲染原理&quot;&gt;&lt;a href=&quot;#浏览器渲染原理&quot; class=&quot;headerlink&quot; title=&quot;浏览器渲染原理&quot;&gt;&lt;/a&gt;浏览器渲染原理&lt;/h1&gt;&lt;p&gt;浏览器的主要任务是将 HTML、CSS 和 JavaScript</summary>
+        
+      
+    
+    
+    
+    
+    <category term="学习" scheme="http://www.zinete.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>武汉买房建议（2025）版</title>
+    <link href="http://www.zinete.com/2025/04/12/%E6%AD%A6%E6%B1%89%E4%B9%B0%E6%88%BF%E5%BB%BA%E8%AE%AE%EF%BC%882025%EF%BC%89%E7%89%88/"/>
+    <id>http://www.zinete.com/2025/04/12/%E6%AD%A6%E6%B1%89%E4%B9%B0%E6%88%BF%E5%BB%BA%E8%AE%AE%EF%BC%882025%EF%BC%89%E7%89%88/</id>
+    <published>2025-04-12T06:12:32.000Z</published>
+    <updated>2025-04-27T07:25:55.693Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;武汉买房攻略建议（2025-版）&quot;&gt;&lt;a href=&quot;#武汉买房攻略建议（2025-版）&quot; class=&quot;headerlink&quot; title=&quot;武汉买房攻略建议（2025 版）&quot;&gt;&lt;/a&gt;武汉买房攻略建议（2025</summary>
+        
+      
+    
+    
+    
+    <category term="房产" scheme="http://www.zinete.com/categories/%E6%88%BF%E4%BA%A7/"/>
+    
+    
+    <category term="买房" scheme="http://www.zinete.com/tags/%E4%B9%B0%E6%88%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何理解 JavaScript 中的事件循环</title>
+    <link href="http://www.zinete.com/2024/07/12/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%20JavaScript%20%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/"/>
+    <id>http://www.zinete.com/2024/07/12/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%20JavaScript%20%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</id>
+    <published>2024-07-12T10:23:50.000Z</published>
+    <updated>2025-04-27T07:25:55.693Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;如何理解-JavaScript-中的事件循环（Event-Loop）&quot;&gt;&lt;a href=&quot;#如何理解-JavaScript-中的事件循环（Event-Loop）&quot; class=&quot;headerlink&quot; title=&quot;如何理解 JavaScript</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="http://www.zinete.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="学习" scheme="http://www.zinete.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一些问题记录</title>
+    <link href="http://www.zinete.com/2023/05/07/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>http://www.zinete.com/2023/05/07/%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2023-05-07T15:05:40.000Z</published>
+    <updated>2025-04-27T07:25:55.693Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一些问题记录&quot;&gt;&lt;a href=&quot;#一些问题记录&quot; class=&quot;headerlink&quot; title=&quot;一些问题记录&quot;&gt;&lt;/a&gt;一些问题记录&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;git 代码提交验证问题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;配置 gpg</summary>
+        
+      
+    
+    
+    
+    <category term="问题记录" scheme="http://www.zinete.com/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+    
+    <category term="问题记录" scheme="http://www.zinete.com/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手动执行添加SSH密钥</title>
+    <link href="http://www.zinete.com/2022/10/04/%E6%89%8B%E5%8A%A8%E6%89%A7%E8%A1%8C%E6%B7%BB%E5%8A%A0SSH%E5%AF%86%E9%92%A5/"/>
+    <id>http://www.zinete.com/2022/10/04/%E6%89%8B%E5%8A%A8%E6%89%A7%E8%A1%8C%E6%B7%BB%E5%8A%A0SSH%E5%AF%86%E9%92%A5/</id>
+    <published>2022-10-04T12:08:05.000Z</published>
+    <updated>2025-04-27T07:25:55.693Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;自动加载-SSH-密钥并使用-macOS-钥匙串&quot;&gt;&lt;a href=&quot;#自动加载-SSH-密钥并使用-macOS-钥匙串&quot; class=&quot;headerlink&quot; title=&quot;自动加载 SSH 密钥并使用 macOS 钥匙串&quot;&gt;&lt;/a&gt;自动加载 SSH</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="http://www.zinete.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="学习" scheme="http://www.zinete.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Session和Cookie的区别</title>
+    <link href="http://www.zinete.com/2022/06/03/Session%E5%92%8CCookie%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://www.zinete.com/2022/06/03/Session%E5%92%8CCookie%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2022-06-03T12:08:05.000Z</published>
+    <updated>2025-04-27T07:25:55.693Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Session-和-Cookie-的区别&quot;&gt;&lt;a href=&quot;#Session-和-Cookie-的区别&quot; class=&quot;headerlink&quot; title=&quot;Session 和 Cookie 的区别&quot;&gt;&lt;/a&gt;Session 和 Cookie</summary>
+        
+      
+    
+    
+    
+    
+    <category term="问题记录" scheme="http://www.zinete.com/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker部署Nuxt应用, 并支持部署自定义http server</title>
+    <link href="http://www.zinete.com/2021/08/11/docker%E9%83%A8%E7%BD%B2nuxt%E5%BA%94%E7%94%A8/"/>
+    <id>http://www.zinete.com/2021/08/11/docker%E9%83%A8%E7%BD%B2nuxt%E5%BA%94%E7%94%A8/</id>
+    <published>2021-08-11T10:31:34.000Z</published>
+    <updated>2025-04-27T07:25:55.693Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;前言: 最近在做一个前端项目。为了使用服务端渲染，使用 nuxt 写的。项目已经完成的差不多了。本来是采用 pm2 + nginx 反向代理的方式部署的应用的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;但是最近有个新的需求就是。每次部署需要自定义 http 请求的接口地址</summary>
+        
+      
+    
+    
+    
+    <category term="Docker" scheme="http://www.zinete.com/categories/Docker/"/>
+    
+    
+    <category term="Nuxt" scheme="http://www.zinete.com/tags/Nuxt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学习swift ui笔记</title>
+    <link href="http://www.zinete.com/2021/08/04/%E5%AD%A6%E4%B9%A0swift%20ui%E7%AC%94%E8%AE%B0/"/>
+    <id>http://www.zinete.com/2021/08/04/%E5%AD%A6%E4%B9%A0swift%20ui%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-08-04T03:08:05.000Z</published>
+    <updated>2025-04-27T07:25:55.693Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SwiftUI-学习笔记&quot;&gt;&lt;a href=&quot;#SwiftUI-学习笔记&quot; class=&quot;headerlink&quot; title=&quot;SwiftUI 学习笔记&quot;&gt;&lt;/a&gt;SwiftUI 学习笔记&lt;/h1&gt;&lt;h3 id=&quot;视图操作&quot;&gt;&lt;a href=&quot;#视图操作&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="学习" scheme="http://www.zinete.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+</feed>
